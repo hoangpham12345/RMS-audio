@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <style>
+  audio {
+      width: 300px;
+      height: 50px;
+  }
+  </style>
   </head>
   <body>
     <audio id="audio" controls></audio>
@@ -10,7 +16,7 @@
 
 <script>
 var playlist = ["audios/main_1.mp3", "audios/main_2.mp3", "audios/main_3.mp3", "audios/main_4.mp3",
-                "audios/main_5.mp3", "audios/main_6.mp3", "audios/main_7.mp3", "audios/main_8.mp3"];;
+                "audios/main_5.mp3", "audios/main_6.mp3", "audios/main_7.mp3", "audios/main_8.mp3"];
 var audio;
 var position = Math.floor(Math.random()*playlist.length);
 
@@ -37,4 +43,3 @@ function nextaudio() {
   audio.play();
 }
 </script>
-
