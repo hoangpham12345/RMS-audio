@@ -8,10 +8,10 @@
       height: 50px;
   }
   </style>
-  </head>
-  <body>
+</head>
+<body>
     <audio id="audio" controls></audio>
-  </body>
+</body>
 </html>
 
 <script>
@@ -28,13 +28,13 @@ var playlist = ["audios/FGO/christmas2015jp.mp3", "audios/FGO/christmas2016jp.mp
 var audio;
 var position = Math.floor(Math.random()*playlist.length);
 
-window.onload = function() {
+window.addEventListener('load', function(){
   audio = document.getElementById("audio");
   audio.addEventListener("ended", nextaudio, false);
   audio.src = playlist[position];
   audio.load();
   audio.play();
-};
+}, false);
 
 function nextaudio() {
   // position++;
