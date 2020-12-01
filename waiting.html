@@ -4,12 +4,23 @@
   <meta charset="utf-8">
 </head>
 <body style="background-color: orange;">
-  <audio id="audio" autoplay loop></audio>
+  <audio id="audio"></audio>
   <h1 style="font-size: 64px; position: fixed; margin: auto; top: 45%; left: 40%; ">WAITING....</h1>
-    <script>
-        window.addEventListener("load", function(){
-            document.getElementById("audio").src = "audios/Hololive/JP - Sakura Miko - OP.mp3";
-        }, true);
-    </script>
+
 </body>
 </html>
+
+<script>
+  var audio;
+  window.addEventListener('load', function(){
+    audio = document.getElementById("audio");
+    audio.addEventListener("ended", replay, false);
+    audio.src = "audios/Hololive/JP - Sakura Miko - OP.mp3";
+    audio.load();
+    audio.play();
+  }, false);
+
+  function replay(){
+    audio.play();
+  }
+</script>
